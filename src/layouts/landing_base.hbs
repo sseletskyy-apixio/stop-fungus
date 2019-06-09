@@ -1,0 +1,70 @@
+<!-- Doctype HTML5 -->
+<!doctype html>
+<html lang="{{#if language}}{{language}}{{else}}en{{/if}}" dir="ltr">
+{{#block "head"}}
+    <head>
+        {{#block "meta"}}
+            {{> meta}}
+        {{/block}}
+
+        {{!#block "relationships"}}
+            {{!> relationships}}
+        {{!/block}}
+
+        {{#block "title"}}
+            <title>{{title}}</title>
+        {{/block}}
+
+        {{#block "general styles"}}
+          <link rel="stylesheet" href="scss/bootstrap.css">
+          <link rel="stylesheet" href="scss/font-awesome-animation.min.css">
+        {{/block}}
+
+        {{#block "general scripts"}}
+          <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/solid.js"
+                  integrity="sha384-6FXzJ8R8IC4v/SKPI8oOcRrUkJU8uvFK6YJ4eDY11bJQz4lRw5/wGthflEOX8hjL"
+                  crossorigin="anonymous"></script>
+          <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/brands.js"
+                  integrity="sha384-zJ8/qgGmKwL+kr/xmGA6s1oXK63ah5/1rHuILmZ44sO2Bbq1V3p3eRTkuGcivyhD"
+                  crossorigin="anonymous"></script>
+          <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/fontawesome.js"
+                  integrity="sha384-xl26xwG2NVtJDw2/96Lmg09++ZjrXPc89j0j7JHjLOdSwHDHPHiucUjfllW0Ywrq"
+                  crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<!--          <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"-->
+<!--                  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"-->
+<!--                  crossorigin="anonymous"></script>-->
+          <script defer src="typescript/main.js"></script>
+        {{/block}}
+
+        {{#block "styles"}}
+            {{#each stylesheets}}
+                <link href="{{this}}" rel="stylesheet" />
+            {{/each}}
+        {{/block}}
+    </head>
+{{/block}}
+
+{{#block "body"}}
+    <body class="{{bodyclass}} loading" style="background-color: #000">
+    {{#block "main"}}
+    {{/block}}
+
+    {{!--
+    {{#block "header"}}
+        {{> header}}
+    {{/block}}
+
+
+    {{#block "footer"}}
+        {{> footer}}
+    {{/block}}
+    --}}
+    {{#block "scripts"}}
+        {{#each scripts}}
+            <script defer src="{{this}}"></script>
+        {{/each}}
+    {{/block}}
+    </body>
+{{/block}}
+</html>

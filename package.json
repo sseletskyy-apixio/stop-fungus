@@ -1,0 +1,33 @@
+{
+  "name": "stop-fungus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve --no-cache src/index.hbs",
+    "clean-build": "rm -rf ../stop-fungus-gh-pages/*.*",
+    "build": "npm run clean-build && parcel build src/index.hbs --no-cache --no-source-maps --public-url ./ -d ../stop-fungus-gh-pages",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve -s ../stop-fungus-gh-pages"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jquery": "^3.3.29",
+    "fullpage.js": "^3.0.4",
+    "handlebars": "^4.1.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.11.0",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-handlebars": "^0.4.4",
+    "parcel-plugin-typescript": "^1.0.0",
+    "popper.js": "^1.14.7",
+    "serve": "^10.1.2",
+    "simple-parallax-js": "^4.2.1",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "sass": "^1.19.0"
+  }
+}
