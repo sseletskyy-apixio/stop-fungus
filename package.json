@@ -16,7 +16,7 @@
   "dependencies": {
     "@types/jquery": "^3.3.29",
     "fullpage.js": "^3.0.4",
-    "handlebars": "^4.1.0",
+    "handlebars": "^4.3.0",
     "jquery": "^3.3.1",
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.11.0",
